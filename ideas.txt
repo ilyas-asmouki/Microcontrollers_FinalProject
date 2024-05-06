@@ -1,0 +1,33 @@
+idée: panel de sécurité intelligent pour une naison
+
+périphériques:
+-   keypad 4x4: input utilisateur, authentification
+-   affichage LCD 2x16: afficher état système, 
+    instructions, feedback, ...
+-   moteur servo: verouillage porte
+-   buzzer: feedback audio lors de tentatives d'accès
+    et état système
+(-  détecteur distance: exemple si on détecte un
+    mouvement trop proche de la porte et que le 
+    système est vérouillé -> alarme intrusion)
+OU BIEN encodeur
+-   ...
+
+
+description:
+-   système centralisé de control de plusieurs points
+    d'accès de la maison
+-   utilisateur peut entrer mot de passe pour 
+    vérouiller/déverouiller porte
+-   LCD affiche état système (ex. "Locked", "Unlocked",
+    "Unauthorized Access",...)
+-   peut se généraliser à plusieurs portes (si on a
+    plus de servos) -> application modulaire
+
+
+technical overview:
+-   microcontroller:
+    -   input: keypad
+    -   output: buzzer, servo(s)
+-   interrupts: boutons keypad, (détecteur distance)
+-   
